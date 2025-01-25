@@ -1,0 +1,278 @@
+/* *{
+    outline: 1px solid white;
+} */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(31,29,30,1) 100%);
+    flex-direction: column;
+    gap: 3rem;
+ }
+
+header {
+    display: inline-flex;  
+    position: fixed;
+    justify-content: space-between;
+    height: 9vh;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgb(128, 1, 1, 0.9), rgb(36, 0, 0,0.9));    
+    color: black;
+    box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.703);
+    border-radius:  0px 0px 10px 10px;
+    transition-duration: 0.1s ;
+
+    & > .container1 > a {
+        display: flex;
+        padding-left: 2rem;
+        justify-content: center;
+        height: 10vh;
+        align-items: center;
+        flex-direction: row;
+        text-decoration: none;
+
+            & > h4{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 900;
+                color: rgb(248, 105, 105);
+                padding-top: 10px;
+            }
+
+            & > img{
+                display: flex;
+                justify-content: center;
+                height: 9vh;
+                rotate: -15deg;
+            }
+        }
+        
+    &:hover{
+        height: 11vh;
+        box-shadow: 1px 1px 10px red;
+
+        & > .container1 > a{
+            display: flex;
+            padding-left: 2rem;
+            justify-content: center;
+            height: 12vh;  
+        }
+    }
+            & > .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                flex-direction: row;
+                padding-right: 10rem;
+
+               
+                & > a:nth-child(1) > button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: red;
+                    width: 9rem;
+                    border-radius: 5px;
+
+                    &:hover{
+                        box-shadow: 2px 2px 5px whitesmoke;
+                    }
+
+                   
+                }
+
+                & > a:nth-child(2) > button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+
+                    &:hover{
+                        background-color: gold;
+                    }
+                }
+
+                & > a {
+                    text-decoration: none;
+
+                    & > button{
+                        display: flex;
+                        border: none;
+                        color: white;
+                        font-family: "Playwrite DE VA", cursive;
+                        font-size: 12px;
+                        font-weight: 600;
+                        width: 8rem;
+                        height: 2.2rem;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        background-color: transparent;
+
+                        & > i{
+                            color: whitesmoke;
+                            font-size: 20px;
+                        }
+                    }
+            }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 1.1rem; /* Width of the scrollbar */
+    scroll-behavior: smooth;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgb(9, 235, 167)0%, rgb(107, 253, 253) 50%,rgb(2, 253, 253)100%);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to top, rgb(5, 231, 235) 0%, rgba(31,29,30,1) 100%);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(to top, rgb(103, 103, 104) 0%, rgba(31,29,30,1) 100%);
+  }
+
+  .container-top{
+    display: flex;
+    height: 10vh;
+    margin-top: 4rem;
+  
+    & > h1{
+        display: flex;
+        padding-top: 4rem;
+        color: white;
+        font-weight: 900;
+    }
+}
+
+.section1{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
+    & > .left{
+        display: flex;
+        width: 40%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+        & > img{
+            display: flex;
+            height: 80vh;
+        }
+    }
+    
+    & > .right{
+        display: flex;
+        width: 60%;
+        height: 70%;
+        color: white;
+        flex-direction: column;
+        gap: 2rem;
+
+        & > .middle{
+            display: flex;
+            flex-direction: row;
+            height: 10vh;
+            align-items: center;
+
+            & > img{
+                display: flex;
+                height: 10vh;
+            }
+        }
+        & > .bottom{
+            display: flex;
+            width: 70%;
+            height: 35vh;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            flex-direction: row;
+            border: 2px solid whitesmoke;
+
+            & > .left{
+                display: flex;
+                height: 100%;
+                width: 40%;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5rem;
+            }
+           
+            & > .right{
+                display: flex;
+                height: 100%;
+                width: 60%;
+                flex-direction: column;
+                background-color: white;
+                gap: 2rem;
+                padding: 10px;
+                justify-content: center;
+
+                & > .container1{
+                    display: flex;
+                    flex-direction: column;
+                    height: 10vh;
+
+                    & > h2{
+                        font-weight: 900;
+                        font-size: 20px;
+                    }
+                }
+
+                & > .container2{
+                    display: flex;
+                    flex-direction: column;
+                    height: 25vh;
+
+                    & > .top {
+                        display: flex;
+                        flex-direction: row ;
+                        justify-content: space-evenly;
+                        height: 15vh;
+
+                        & > .availability{
+                        }
+                        
+                    }
+                    & > .bottom{
+                        display: flex;
+                        justify-content: center;
+                        height: 5vh;
+
+                    }
+                }
+
+                
+            }
+        }
+        
+        & > .subtotal{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            width: 70%;
+
+            & > .confirmation-button {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+/* * {
+    outline: 1px solid red;
+} */
