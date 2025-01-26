@@ -35,23 +35,15 @@
             </a>
         </div>
     </header>
-    <div class="container-top">
+    <!-- <div class="container-top">
         <h1>BUY TICKET</h1>
-    </div>
+    </div> -->
     <section class="section1">
-        <div class="left">
+        <div class="section-left">
             <img src="./assets/img/straight.jpg" alt="">
         </div>
-        <div class="right">
+        <div class="section-right">
             <div class="top"> 
-                
-                <p>Select the number and type of tickets you wish to buy. Please note seats are reserved on a best available basis. You can buy a    maximum of 8 tickets per transaction.</p>
-            </div>
-            <div class="middle">
-                <img src="./assets/img/pngwing.com.png" alt="">
-                <h1>Select Seats</h1>
-            </div>
-            <div class="bottom">
                 <div class="left">
                     <img src="./assets/img/—Pngtree—cinema vector illustration_3704537.png" alt="">
                 </div>
@@ -64,32 +56,36 @@
                         <div class="top">
                             <div class="price">
                                 <b>Price</b>
-                                <p id="price">₱390</p>
+                                <p id="price">₱ 390</p>
                             </div>
                             <div class="availability">
                                 <b>Available Seats</b>
-                                <p id="seats">10</p>
+                                <p id="available">10</p>
                             </div>
-                            <div class="quantity">
-                                <p>Qty</p>
-                                <input type="number" id="Quantity" placeholder="Qty" value="1" min="1" max="10">
+                            <div class="seats">
+                                <b>No. of Seats</b>
+                                <p id="Seatno"></p>
                             </div>
                             </div>
-                        <div class="bottom" onclick="submit()">
-                                <button>SUBMIT</button>
+                        <div class="bottom">
+                            <b>SUBTOTAL:&nbsp; </b><p id="output"></p>
                         </div>
                     </div>
-                    </div>       
-                </div>
-                <div class="subtotal">
-                    <b>Subtotal: </b><p id="output"></p>
+                </div>       
+            </div>
+            <div class="middle">
+                    <input type="number" id="Quantity" placeholder="Qty" value="1" min="1" max="10">
+                    <button onclick="submit()" id="submit">SUBMIT</button>
                     <div class="confirmation-button" id="confirmation">
                         <p>Do you wish to Continue?</p>
-                        <button>Yes</button>
-                        <button>No</button>
+                        <button onclick="yes()" id="yes">Yes</button>
+                        <button onclick="no()" id="no">No</button>
                     </div>
                 </div>
             </div>
+            <div class="bottom">
+            </div>
+
     </section>
 <script src="./assets/js/scripts.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

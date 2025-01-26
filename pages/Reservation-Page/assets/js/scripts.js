@@ -1,55 +1,54 @@
-// const seats = 
+let placeholderData = JSON.parse(localStorage.getItem("Available seats")) || [{ available: 10 }];
 
-document.getElementById('price').innerText = 390;
+// Initialize the `available` seats on page load
+document.getElementById("available").innerText = placeholderData[0].available;
+// Set initial Seatno value to 0
+document.getElementById("Seatno").innerText = 0;
 
-function submit(){
-    const Quantity = document.getElementById('Quantity').value;
-    const seats = document.getElementById('seats');
-    const output = document.getElementById('output');
-    let currentSeats = parseInt(seats.innerText);
-    let currentPrice = parseInt(price.innerText);
-    const hiddenElement = document.getElementById('confirmation');
+function submit() {
+    const Quantity = parseInt(document.getElementById('Quantity').value); // Get the input quantity
+    const output = document.getElementById('output'); // Subtotal display
+    const hiddenElement = document.getElementById('confirmation'); // Confirmation dialog
+    const submitButton = document.getElementById('submit'); // Submit button
+    const available = document.getElementById('available'); // Available seats display
+    const Seatno = document.getElementById('Seatno'); // Selected seats display
+    let currentSeats = parseInt(available.innerText); // Get current seat availability
+    const price = 390; // Price per seat
 
-    if (Quantity <= 10) {
+
+
+    // Check if there are enough seats available
+    if (currentSeats >= Quantity) {
+        // Update selected seats and available seats
+        Seatno.innerText = Quantity;
         currentSeats -= Quantity;
-        seats.innerText = currentSeats;
-        currentPrice *= Quantity;
-        output.innerText = currentPrice;   
-        Quantity.innerHTML = '';  
-        hiddenElement.style.visibility = "visible"; 
-    }  
-        else{
-            alert('incomplete');
-        }
+        const subtotal = price * Quantity; // Calculate subtotal
+        output.innerHTML = ` ₱  ${subtotal}`; // Show subtotal
 
-        document.getElementById('Quantity').value = '';
+        // Show confirmation dialog and disable submit button
+        hiddenElement.style.visibility = "visible";
+        submitButton.disabled = true;
+
+        // "Yes" button logic
+        document.getElementById('yes').onclick = function () {
+            alert('Reservation confirmed!');
+            placeholderData = [{ available: currentSeats }]; // Update localStorage
+            localStorage.setItem("Available seats", JSON.stringify(placeholderData));
+            available.innerText = currentSeats; // Update UI with new available seats
+            location.reload();
+
+        };
+
+        // "No" button logic
+        document.getElementById('no').onclick = function () {
+            alert('Reservation cancelled.');
+            hiddenElement.style.visibility = "hidden"; // Hide confirmation dialog
+            submitButton.disabled = false;
+            location.reload(); // Re-enable submit button
+        };
+    } else {
+        alert('Not enough seats available.'); // Alert if insufficient seats
     }
-    
-//     if (Quantity <=10) {
-//         output.innerText = `${Quantity * 390}`;
-//     }
-//     else{
-//         alert('incomplete');
-//     }
-    
-// }
 
-
-        // if (input > 100){
-        //     alert('You\'ve reached the maximum limit');
-        // }
-        // else if (input <= 0){
-        //     alert('invalid input');
-    
-        // }
-        // else{
-        //     output.innerHTML = ''; 
-            
-        //         for (let i = 0; i < parseInt(input); i++) {
-        //         const newIcon = document.createElement('i');
-        //         newIcon.className = 'fa-solid fa-basketball'; 
-        //         output.appendChild(newIcon);
-        //     }
-        // }
-
-    
+    document.getElementById('Quantity').value = '';
+}
