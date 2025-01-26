@@ -12,9 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
-<>
+
     <header>
         <div class="container1">
             <a href="../../index.html">
@@ -23,11 +22,11 @@
             </a>
         </div>
         <div class="button">   
-            <a href="../Movies-Page/index.html">
-                <button>
-                    ← BACK TO MOVIES 
-                </button>           
-            </a>      
+            <a href="../Ticket-Page/index.html">
+                <button>←
+                 <i class="bi bi-ticket-perforated"></i>
+                    BUY TICKET
+                </button>  
             <a href="../Contact-page/index.html">
                 <button>
                     CONTACT 
@@ -74,18 +73,28 @@
                 </div>       
             </div>
             <div class="middle">
-                    <input type="number" id="Quantity" placeholder="Qty" value="1" min="1" max="10">
-                    <button onclick="submit()" id="submit">SUBMIT</button>
-                    <div class="confirmation-button" id="confirmation">
-                        <p>Do you wish to Continue?</p>
-                        <button onclick="yes()" id="yes">Yes</button>
-                        <button onclick="no()" id="no">No</button>
+                <h3>Number of Seats</h3>
+                <!-- <p>Select the number and type of tickets you wish to buy. Please note seats are reserved on a best available basis. You can buy a maximum of 10 tickets per movie.</p> -->
+                <div class="holder">
+                    <img src="./assets/img/pngwing.com.png" alt="">
+                    <div class="middle-right">
+                        <input type="number" id="Quantity" placeholder="Qty" value="1" min="1" max="10">
+                        <button onclick="submit()" id="submit">SUBMIT</button>
                     </div>
+                </div>
+                <div class="confirmation-button" id="confirmation">
+                    <h1 id="confirmed">sent</h1>
+                    <p>Do you wish to Continue?</p>
+                    <div class="button-holder">
+                        <button onclick="no()" id="no">No</button>
+                        <button onclick="yes()" id="yes">Yes</button>
+                    </div>
+                </div>
                 </div>
             </div>
             <div class="bottom">
+                
             </div>
-
     </section>
 <script src="./assets/js/scripts.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

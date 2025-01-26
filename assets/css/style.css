@@ -6,7 +6,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1;
-    background: linear-gradient(to top, rgb(128, 1, 1, 0.7), rgb(36, 0, 0,0.6));    
+    background: linear-gradient(to top, rgb(128, 1, 1, 0.9), rgb(36, 0, 0,0.9));    
     color: black;
     box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.703);
     border-radius:  0px 0px 10px 10px;
@@ -26,7 +26,7 @@ header {
                 justify-content: center;
                 align-items: center;
                 font-weight: 900;
-                color: rgb(248, 105, 105);
+                color: rgb(225, 222, 222);
                 padding-top: 10px;
             }
 
@@ -75,10 +75,10 @@ header {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        border-radius: 5px;
+                        width: 6rem;
 
                         &:hover{
-                            background-color: gold;
+                            border-bottom: 2px solid red;
                         }
                     }
 
@@ -121,46 +121,56 @@ header {
 
     & > .container1{
         display: flex;
-        width: 80%;
-        height: 45%;
+        width: 70%;
+        height: 60%;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         text-align: center;
-        padding-top: 9rem;
+        padding-top: 8rem;
         gap: 1rem;
+        color: rgb(225, 222, 222);
 
         & > h1{
             font-size: 100px;
             font-weight: 900;
-            color: white;
         }
         & > p{
-            color: white;
             font-family: "Playwrite DE VA", cursive;
-
+            
         }
-        & > a > button{
+        & > a {
+            text-decoration: none;
+
+            & > button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 7px;
             border: none;
             background-color: red;
             color: white;
             font-family: "Playwrite DE VA", cursive;
             height: 2.4rem;
-            width: 9rem;
+            width: 7rem;
             border-radius: 5px;
             font-weight: 900;
-            font-size: 12px;
+            font-size: 13px;
+            margin-top: 3rem;
+            
+            & > i{
+                font-size: 14px;
+            }
+
+            &:hover{
+                font-size: 14px;
+            }
+            
         }
     }
-
-    & > .container2{
-        display: flex;
-        width: 40%;
-        height: 10vh;
-        justify-content: center;
-        align-items: center;
-        /* padding-right: 6rem; */
-
-    }
 }
-
+}
+/* * {
+    outline: 2px solid rebeccapurple;
+} */

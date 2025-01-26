@@ -31,12 +31,13 @@ function submit() {
 
         // "Yes" button logic
         document.getElementById('yes').onclick = function () {
-            alert('Reservation confirmed!');
+            confirmed.style.visibility = 'visible';
             placeholderData = [{ available: currentSeats }]; // Update localStorage
             localStorage.setItem("Available seats", JSON.stringify(placeholderData));
+            setTimeout(() => {
+                location.reload();
+            }, 1000)
             available.innerText = currentSeats; // Update UI with new available seats
-            location.reload();
-
         };
 
         // "No" button logic
