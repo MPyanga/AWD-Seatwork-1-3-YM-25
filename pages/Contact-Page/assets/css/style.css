@@ -107,23 +107,7 @@ header {
             }
     }
 }
-    ::-webkit-scrollbar {
-        width: 1.1rem; /* Width of the scrollbar */
-        scroll-behavior: smooth;
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background: linear-gradient(to bottom, rgb(9, 235, 167)0%, rgb(107, 253, 253) 50%,rgb(2, 253, 253)100%);
-        border-radius: 10px;
-      }
-      
-      ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(to top, rgb(5, 231, 235) 0%, rgba(31,29,30,1) 100%);
-      }
-      
-      ::-webkit-scrollbar-track {
-        background: linear-gradient(to top, rgb(103, 103, 104) 0%, rgba(31,29,30,1) 100%);
-    }
+
 
 body{
     background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(31,29,30,1) 100%);

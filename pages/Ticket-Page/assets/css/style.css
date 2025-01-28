@@ -123,21 +123,21 @@ header {
 }
 
 ::-webkit-scrollbar {
-    width: 1.1rem; /* Width of the scrollbar */
+    width: 1.1rem;
     scroll-behavior: smooth;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, rgb(9, 235, 167)0%, rgb(107, 253, 253) 50%,rgb(2, 253, 253)100%);
-    border-radius: 10px;
+    background: linear-gradient(to bottom, rgb(235, 9, 9)0%, rgb(45, 1, 1) 50%,rgb(108, 0, 0)100%);
+    border-radius: 5px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to top, rgb(5, 231, 235) 0%, rgba(31,29,30,1) 100%);
+    background: linear-gradient(to bottom, rgb(114, 2, 2) 0%, rgba(31,29,30,1), rgb(114, 2, 2) 100%);
   }
   
   ::-webkit-scrollbar-track {
-    background: linear-gradient(to top, rgb(103, 103, 104) 0%, rgba(31,29,30,1) 100%);
+    background: linear-gradient(to top, rgb(63, 63, 63) 0%, rgba(31,29,30,1) 100%);
   }
 
   .container-top{
