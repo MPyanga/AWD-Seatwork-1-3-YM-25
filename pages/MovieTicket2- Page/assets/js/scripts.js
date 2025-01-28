@@ -8,7 +8,6 @@ document.getElementById("Seatno").innerText = 0;
 function submit() {
     const Quantity = parseInt(document.getElementById('Quantity').value); // Get the input quantity
     const output = document.getElementById('output'); // Subtotal display
-    const hiddenElement = document.getElementById('confirmation'); // Confirmation dialog
     const submitButton = document.getElementById('submit'); // Submit button
     const available = document.getElementById('available'); // Available seats display
     const Seatno = document.getElementById('Seatno'); // Selected seats display
@@ -26,7 +25,7 @@ function submit() {
         output.innerHTML = ` ₱  ${subtotal}`; // Show subtotal
 
         // Show confirmation dialog and disable submit button
-        hiddenElement.style.visibility = "visible";
+        confirmation.style.visibility = "visible";
         submitButton.disabled = true;
 
         // "Yes" button logic
@@ -36,7 +35,7 @@ function submit() {
             output.innerText = "";
             confirmed.style.visibility = 'visible';
             confirmation.style.visibility = 'hidden';
-            middle.style.visibility = 'hidden';
+            seatholder.style.visibility = 'hidden';
             h3.style.visibility = 'hidden';
             placeholderData = [{ AvailableSeats: currentSeats }]; // Update localStorage
             localStorage.setItem("Movie 2", JSON.stringify(placeholderData));
@@ -50,7 +49,7 @@ function submit() {
         // "No" button logic
         document.getElementById('no').onclick = function () {
             alert('Reservation cancelled.');
-            hiddenElement.style.visibility = "hidden"; // Hide confirmation dialog
+           confirmation.style.visibility = "hidden"; // Hide confirmation dialog
             submitButton.disabled = false;
             location.reload(); // Re-enable submit button
         };
