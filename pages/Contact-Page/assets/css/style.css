@@ -126,28 +126,16 @@ header {
     }
 
 body{
-    background: radial-gradient(circle, rgb(20, 20, 20) 0%, rgb(20, 20, 20) 100%);
-}
-
-#pop-up{
-    display: flex;
-    height: 10vh;
-    margin-top: 11vh;
-    padding-left: 50px;
-    font-weight: 800;
-    text-align: center;
-    height: 8vh;
-    width: 27rem;
-    border-bottom: 10px solid blueviolet;
-    font-size: 2rem;
-    color: rgb(9, 235, 167);
-    
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(31,29,30,1) 100%);
 }
 
 section{
     display: flex;
     justify-content: center;
     height: 90vh;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
 
         & > .holder{
             display: flex;
@@ -159,12 +147,13 @@ section{
             align-items: center;
             gap: 1rem;
             border-radius: 20px;
-            box-shadow: 1px 1px 15px rgba(137, 43, 226, 0.705);   
+            border-top: 5px solid red;
+            box-shadow: 1px 1px 15px rgba(103, 103, 103, 0.602);   
             margin-top: 2rem;
+            color: whitesmoke;
 
                     
             & > h2{
-            color: blueviolet;
             font-weight: 800;
             
             }   
@@ -184,26 +173,16 @@ section{
                 align-items: center;
                 border: none;
                 border-radius: 15px;
-                background-color: blueviolet;
+                background-color: rgba(223, 4, 4);
                 font-weight: 700;
                 transition: 0.2s ;
+                color: whitesmoke;
 
                 &:hover{
-                    border: 1.5px solid blueviolet;
+                    border: 1.5px solid rgba(223, 4, 4);
                     background-color: whitesmoke;
                 }
             }
-
-         & > h1{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 800;
-            font-size: 30px;
-            visibility: hidden;
-            color: rgb(14, 241, 14);
-            gap: 5px;
-         }
             
             & > input{
                 display: flex;
@@ -220,7 +199,14 @@ section{
                 }
                
             }
-       
-        }
-    }
 
+       & > .socials{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 2rem;
+       }
+    }
+}
+  

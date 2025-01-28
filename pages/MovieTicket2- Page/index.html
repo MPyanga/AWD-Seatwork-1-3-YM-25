@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
 <>
     <header>
@@ -50,13 +49,52 @@
                 </div>
                 <div class="right">
                     <div class="container1">
+                        <div class="title">
+                            <h2>Mr. PLANKTON</h2>
+                            <p>Sun 15 Aug 6:30PM</p>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="container2">
+                        <div class="top">
+                            <div class="price">
+                                <b>Ticket Price</b>
+                                <p id="price">₱ 390</p>
+                            </div>
+                            <div class="availability">
+                                <b>Available Seats</b>
+                                <p id="available">10</p>
+                            </div>
+                            <div class="seats">
+                                <b>No. of Seats</b>
+                                <p id="Seatno"></p>
+                            </div>
+                            </div>
+                        <div class="bottom">
+                            <b>SUBTOTAL:&nbsp; </b><p id="output"></p>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+            <div class="top2"> 
+                <div class="left">
+                    <img src="./assets/img/—Pngtree—cinema vector illustration_3704537.png" alt="">
+                </div>
+                <div class="right">
+                    <div class="container1">
                         <h2>Mr. PLANKTON</h2>
                         <p>Sun 15 Aug 6:30PM</p>
                     </div>
                     <div class="container2">
                         <div class="top">
                             <div class="price">
-                                <b>Price</b>
+                                <b>Ticket Price</b>
                                 <p id="price">₱ 390</p>
                             </div>
                             <div class="availability">
@@ -75,9 +113,8 @@
                 </div>       
             </div>
             <div class="middle">
-                <h3>Number of Seats</h3>
-                <!-- <p>Select the number and type of tickets you wish to buy. Please note seats are reserved on a best available basis. You can buy a maximum of 10 tickets per movie.</p> -->
-                <div class="holder">
+                <h3 id="h3">Number of Seats</h3>
+                <div class="holder" id="middle">
                     <img src="./assets/img/pngwing.com.png" alt="">
                     <div class="middle-right">
                         <input type="number" id="Quantity" placeholder="Qty" value="1" min="1" max="10">
@@ -85,18 +122,21 @@
                     </div>
                 </div>
                 <div class="confirmation-button" id="confirmation">
-                    <h1 id="confirmed">sent</h1>
-                    <p>Do you wish to Continue?</p>
+                    <div class="message-holder">
+                        <div id="confirmed" class="confirmed">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h5>Success!</h5>
+                            <p>Thank you for your purchase!</p>
+                        </div>
+                        <img src="./assets/img/pngegg (1).png" alt="">
+                        <h4>Confirm your ticket!</h4>
+                    </div>
                     <div class="button-holder">
-                        <button onclick="no()" id="no">No</button>
-                        <button onclick="yes()" id="yes">Yes</button>
-
+                        <button onclick="no()" id="no">Cancel</button>
+                        <button onclick="yes()" id="yes">Confirm</button>
                     </div>
                 </div>
                 </div>
-            </div>
-            <div class="bottom">
-                
             </div>
     </section>
 <script src="./assets/js/scripts.js"></script>

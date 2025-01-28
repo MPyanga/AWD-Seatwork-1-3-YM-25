@@ -1,7 +1,7 @@
-let placeholderData = JSON.parse(localStorage.getItem("Movie 2")) || [{ available: 10 }];
+let placeholderData = JSON.parse(localStorage.getItem("Movie 2")) || [{ AvailableSeats: 100 }];
 
 // Initialize the `available` seats on page load
-document.getElementById("available").innerText = placeholderData[0].available;
+document.getElementById("available").innerText = placeholderData[0].AvailableSeats;
 // Set initial Seatno value to 0
 document.getElementById("Seatno").innerText = 0;
 
@@ -31,13 +31,20 @@ function submit() {
 
         // "Yes" button logic
         document.getElementById('yes').onclick = function () {
+            available.innerText = currentSeats;
+            Seatno.innerText = 0;
+            output.innerText = "";
             confirmed.style.visibility = 'visible';
-            placeholderData = [{ available: currentSeats }]; // Update localStorage
+            confirmation.style.visibility = 'hidden';
+            middle.style.visibility = 'hidden';
+            h3.style.visibility = 'hidden';
+            placeholderData = [{ AvailableSeats: currentSeats }]; // Update localStorage
             localStorage.setItem("Movie 2", JSON.stringify(placeholderData));
             setTimeout(() => {
                 location.reload();
-            }, 1000)
-            available.innerText = currentSeats; // Update UI with new available seats
+            }, 3000)
+             // Update UI with new available seats
+             
         };
 
         // "No" button logic

@@ -1,7 +1,7 @@
-let placeholderData = JSON.parse(localStorage.getItem("Movie 1")) || [{ available: 10 }];
+let placeholderData = JSON.parse(localStorage.getItem("Movie 1")) || [{ AvailableSeats: 10 }];
 
 // Initialize the `available` seats on page load
-document.getElementById("available").innerText = placeholderData[0].available;
+document.getElementById("available").innerText = placeholderData[0].AvailableSeats;
 // Set initial Seatno value to 0
 document.getElementById("Seatno").innerText = 0;
 
@@ -32,7 +32,7 @@ function submit() {
         // "Yes" button logic
         document.getElementById('yes').onclick = function () {
             confirmed.style.visibility = 'visible';
-            placeholderData = [{ available: currentSeats }]; // Update localStorage
+            placeholderData = [{ AvailableSeats: currentSeats }]; // Update localStorage
             localStorage.setItem("Movie 1", JSON.stringify(placeholderData));
             setTimeout(() => {
                 location.reload();
