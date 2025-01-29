@@ -21,22 +21,22 @@ header {
         flex-direction: row;
         text-decoration: none;
 
-            & > h4{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-weight: 900;
-                color: rgb(225, 222, 222);
-                padding-top: 10px;
-            }
-
-            & > img{
-                display: flex;
-                justify-content: center;
-                height: 9vh;
-                rotate: -15deg;
-            }
+        & > h4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            color: rgb(225, 222, 222);
+            padding-top: 10px;
         }
+
+        & > img{
+            display: flex;
+            justify-content: center;
+            height: 9vh;
+            rotate: -15deg;
+        }
+    }
 
     &:hover{
         height: 11vh;
@@ -47,64 +47,63 @@ header {
             padding-left: 2rem;
             justify-content: center;
             height: 12vh;  
+        }
     }
+    & > .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-direction: row;
+        padding-right: 10rem;
+
+        & > a:nth-child(1) > button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            width: 9rem;
+            border-radius: 5px;
+
+            &:hover{
+                box-shadow: 2px 2px 5px whitesmoke;
+            }
         }
 
-            & > .button {
+        & > a:nth-child(2) > button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 6rem;
+
+            &:hover{
+                border-bottom: 2px solid red;
+            }
+        }
+
+        & > a {
+            text-decoration: none;
+
+            & > button{
                 display: flex;
+                border: none;
+                color: white;
+                font-family: "Playwrite DE VA", cursive;
+                font-size: 12px;
+                font-weight: 600;
+                width: 8rem;
+                height: 2.2rem;
                 align-items: center;
                 justify-content: center;
-                gap: 2rem;
-                flex-direction: row;
-                padding-right: 10rem;
+                gap: 10px;
+                background-color: transparent;
 
-                & > a:nth-child(1) > button{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: red;
-                        width: 9rem;
-                        border-radius: 5px;
-
-                        &:hover{
-                            box-shadow: 2px 2px 5px whitesmoke;
-                        }
-                    }
-
-                    & > a:nth-child(2) > button{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 6rem;
-
-                        &:hover{
-                            border-bottom: 2px solid red;
-                        }
-                    }
-
-                & > a {
-                    text-decoration: none;
-
-                    & > button{
-                        display: flex;
-                        border: none;
-                        color: white;
-                        font-family: "Playwrite DE VA", cursive;
-                        font-size: 12px;
-                        font-weight: 600;
-                        width: 8rem;
-                        height: 2.2rem;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 10px;
-                        background-color: transparent;
-
-                        & > i{
-                            color: whitesmoke;
-                            font-size: 20px;
-                        }
-                    }
+                & > i{
+                    color: whitesmoke;
+                    font-size: 20px;
+                }
             }
+        }
     }
 }
 
@@ -159,18 +158,14 @@ header {
             font-size: 13px;
             margin-top: 3rem;
             
-            & > i{
-                font-size: 14px;
-            }
+                & > i{
+                    font-size: 14px;
+                }
 
-            &:hover{
-                font-size: 14px;
+                &:hover{
+                    font-size: 14px;
+                }
             }
-            
         }
     }
 }
-}
-/* * {
-    outline: 2px solid rebeccapurple;
-} */
