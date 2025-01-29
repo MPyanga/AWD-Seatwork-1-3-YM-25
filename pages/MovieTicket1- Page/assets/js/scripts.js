@@ -1,4 +1,4 @@
-let placeholderData = JSON.parse(localStorage.getItem("Movie 1")) || [{ AvailableSeats: 1 }];
+let placeholderData = JSON.parse(localStorage.getItem("Movie 1")) || [{ AvailableSeats: 10 }];
 
 // Initialize the `available` seats on page load
 document.getElementById("available").innerText = placeholderData[0].AvailableSeats;
@@ -15,10 +15,9 @@ function submit() {
     const price = 390; // Price per seat
 
     if (Quantity <= 0 || isNaN(Quantity)){
-        alert('kulangot');
+        alert('Please enter the number of seats.');
         return;
     }
-
     // Check if there are enough seats available
     if (currentSeats >= Quantity) {
         // Update selected seats and available seats
@@ -45,6 +44,8 @@ function submit() {
             setTimeout(() => {
                 location.reload();
             }, 1500)
+             // Update UI with new available seats
+             
         };
 
         // "No" button logic
@@ -54,9 +55,16 @@ function submit() {
             submitButton.disabled = false;
             location.reload(); // Re-enable submit button
         };
-    } else {
-        alert('Not enough seats available.'); 
+        
+    } 
+
+    else if(currentSeats != 0){
+        alert('Sorry! You\'ve reached the maximum seat limit'); 
     }
+
+    else{
+        alert('Tickets for this movie are sold out!'); 
+        }
 
     document.getElementById('Quantity').value = '';
 }

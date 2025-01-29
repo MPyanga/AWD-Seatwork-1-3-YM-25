@@ -1,4 +1,4 @@
-let placeholderData = JSON.parse(localStorage.getItem("Movie 2")) || [{ AvailableSeats: 100 }];
+let placeholderData = JSON.parse(localStorage.getItem("Movie 2")) || [{ AvailableSeats: 10 }];
 
 // Initialize the `available` seats on page load
 document.getElementById("available").innerText = placeholderData[0].AvailableSeats;
@@ -14,7 +14,12 @@ function submit() {
     let currentSeats = parseInt(available.innerText); // Get current seat availability
     const price = 390; // Price per seat
 
+    if (Quantity <= 0 || isNaN(Quantity)){
+        alert('Please enter the number of seats.');
+        return;
+    }
 
+    
 
     // Check if there are enough seats available
     if (currentSeats >= Quantity) {
@@ -41,7 +46,7 @@ function submit() {
             localStorage.setItem("Movie 2", JSON.stringify(placeholderData));
             setTimeout(() => {
                 location.reload();
-            }, 3000)
+            }, 1500)
              // Update UI with new available seats
              
         };
@@ -49,13 +54,19 @@ function submit() {
         // "No" button logic
         document.getElementById('no').onclick = function () {
             alert('Reservation cancelled.');
-           confirmation.style.visibility = "hidden"; // Hide confirmation dialog
+            confirmation.style.visibility = "hidden"; // Hide confirmation dialog
             submitButton.disabled = false;
             location.reload(); // Re-enable submit button
         };
-    } else {
-        alert('Not enough seats available.'); // Alert if insufficient seats
+        
+    } 
+
+    else if(currentSeats != 0){
+        alert('Sorry! You\'ve reached the maximum seat limit'); 
     }
+    else{
+        alert('Tickets for this movie are sold out!'); 
+        }
 
     document.getElementById('Quantity').value = '';
 }

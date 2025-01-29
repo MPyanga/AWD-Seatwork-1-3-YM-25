@@ -138,11 +138,14 @@ background: linear-gradient(to top, rgb(63, 63, 63) 0%, rgba(31,29,30,1) 100%);
 .container-top{
     display: flex;
     height: 10vh;
-    margin-top: 4rem;
-
+    margin-top: 13vh;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
     & > h1{
         display: flex;
-        padding-top: 4rem;
         color: white;
         font-weight: 900;
     }
@@ -158,7 +161,6 @@ background: linear-gradient(to top, rgb(63, 63, 63) 0%, rgba(31,29,30,1) 100%);
     background-image: url(../img/staright-outta-compton-intro-02.webp);
     background-position: center;
     background-size: cover;
-    margin-top: 5vh;
     box-shadow: 1px 1px 15px white;
     border-radius: 5px;
 
