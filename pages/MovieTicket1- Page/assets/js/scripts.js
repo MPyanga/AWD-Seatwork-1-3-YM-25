@@ -5,9 +5,9 @@ document.getElementById("available").innerText = placeholderData[0].AvailableSea
 // Set initial Seatno value to 0
 document.getElementById("Seatno").innerText = 0;
 
-function submit() {
+function submit() { 
     const Quantity = parseInt(document.getElementById('Quantity').value); // Get the input quantity
-    const subtotal = document.getElementById('subtotal'); // Subtotal display
+    const output = document.getElementById('output'); // Subtotal display
     const submitButton = document.getElementById('submit'); // Submit button
     const available = document.getElementById('available'); // Available seats display
     const Seatno = document.getElementById('Seatno'); // Selected seats display

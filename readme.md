@@ -4,26 +4,25 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
+  <a href="https://github.com/MPyanga/">
   <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="./assets/img/pngwing.com (1).png" alt="logo" width="130" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+  <h3 align="center">AWD-Seatwork-1-3-YM-25</h3>
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+An advanced web design project showcasing HTML, CSS, and JavaScript that displays two movies for reservation. Users can reserve a seat, and JavaScript dynamically updates seat availability.
 </div>
 
 <br />
 
 <!-- TODO: Change the zyx-0314 into your github username  -->
 <!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=MPyanga/AWD-Seatwork-1-3-YM-25)
 
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
-
+[![wakatime](https://wakatime.com/badge/user/018ee676-36ea-4a3c-9a5e-ace3ab3fe8b8/project/f4d9437c-2d4b-4268-9cd7-7d150e282d68.svg)](https://wakatime.com/badge/user/018ee676-36ea-4a3c-9a5e-ace3ab3fe8b8/project/f4d9437c-2d4b-4268-9cd7-7d150e282d68)
 ---
 
 <br />
@@ -92,7 +91,7 @@ Guiding Question:
 7. File Structure to follow below.
 
 ```
-WD-ProjectName
+AWD-Seatwork-1-3-YM-25
 └─ assets
 |   └─ css
 |   |   └─ style.css
@@ -101,7 +100,43 @@ WD-ProjectName
 |   └─ js
 |       └─ script.js
 └─ pages
-|  └─ pageName
+|  └─ Contact-Page
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ img
+|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
+|     |  └─ js
+|     |     └─ script.js
+|     └─ index.html
+    └─ Movies-Page
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ img
+|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
+|     |  └─ js
+|     |     └─ script.js
+|     └─ index.html
+    └─ MovieTicket1-Page
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ img
+|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
+|     |  └─ js
+|     |     └─ script.js
+|     └─ index.html
+    └─ MovieTicket2-Page
+|     └─ assets
+|     |  └─ css
+|     |  |  └─ style.css
+|     |  └─ img
+|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
+|     |  └─ js
+|     |     └─ script.js
+|     └─ index.html
+    └─ Ticket-Page
 |     └─ assets
 |     |  └─ css
 |     |  |  └─ style.css
@@ -119,4 +154,8 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| W3schools | To learn different style of codes. | https://www.w3schools.com/css/default.asp |
+| Google Fonts | For font styles.	| https://fonts.google.com/ |
+| Fontawesome | To get fonts that serves as symbols | https://fontawesome.com |
+| Aos Library | For scroll animations | https://michalsnik.github.io/aos/ |
+| Bootstrap | For other functionalities	 | https://getbootstrap.com/ |
