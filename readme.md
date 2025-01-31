@@ -66,12 +66,6 @@ This project is an interactive web-based movie reservation system designed to al
 Purpose of the Project
 The primary goal of this project is to simulate a real-world movie seat booking system while applying advanced web design concepts. It helps users understand how dynamic content updates work in real-time. Additionally, the project showcases front-end development skills, focusing on UI/UX design and JavaScript functionalities.
 
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
-
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
