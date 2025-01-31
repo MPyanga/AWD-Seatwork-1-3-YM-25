@@ -58,7 +58,13 @@ An advanced web design project showcasing HTML, CSS, and JavaScript that display
 
 <!-- TODO: To be changed -->
 <!-- The following are just sample -->
-Description of the project in details.
+A Movie Reservation System is an advanced web design project that enables users to reserve seats offering two movies while dynamically updating seat availability using JavaScript and stores data through the local storage.
+
+Project Overview
+This project is an interactive web-based movie reservation system designed to allow users to browse available seats with maximum of 10 seats offered each movie and confirm their reservations. It ensures a smooth and user-friendly experience with a visually appealing interface.
+
+Purpose of the Project
+The primary goal of this project is to simulate a real-world movie seat booking system while applying advanced web design concepts. It helps users understand how dynamic content updates work in real-time. Additionally, the project showcases front-end development skills, focusing on UI/UX design and JavaScript functionalities.
 
 Guiding Question:
 - What is the project
@@ -70,8 +76,11 @@ Guiding Question:
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
 - MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- Movie Selection Page
+- Dynamic Seat Reservation
+- Price Calculation 
+- Confirmation System 
+
 
 ### Technology
 <!-- TODO: List of Technology Used -->

@@ -7,7 +7,7 @@ document.getElementById("Seatno").innerText = 0;
 
 function submit() { 
     const Quantity = parseInt(document.getElementById('Quantity').value); // Get the input quantity
-    const output = document.getElementById('output'); // Subtotal display
+    const total = document.getElementById('total'); // Subtotal display
     const submitButton = document.getElementById('submit'); // Submit button
     const available = document.getElementById('available'); // Available seats display
     const Seatno = document.getElementById('Seatno'); // Selected seats display
@@ -24,7 +24,7 @@ function submit() {
         Seatno.innerText = Quantity;
         currentSeats -= Quantity;
         const subtotal = price * Quantity; // Calculate subtotal
-        subtotal.innerHTML = ` ₱  ${subtotal}`; // Show subtotal
+        total.innerHTML = ` ₱  ${subtotal}`; // Show subtotal
 
         // Show confirmation dialog and disable submit button
         confirmation.style.visibility = "visible";
@@ -34,7 +34,7 @@ function submit() {
         document.getElementById('yes').onclick = function () {
             available.innerText = currentSeats;
             Seatno.innerText = 0;
-            subtotal.innerText = "";
+            total.innerText = "";
             confirmed.style.visibility = 'visible';
             confirmation.style.visibility = 'hidden';
             seatholder.style.visibility = 'hidden';
