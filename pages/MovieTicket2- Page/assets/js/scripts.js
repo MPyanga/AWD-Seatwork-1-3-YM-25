@@ -19,8 +19,6 @@ function submit() {
         return;
     }
 
-    
-
     // Check if there are enough seats available
     if (currentSeats >= Quantity) {
         // Update selected seats and available seats
@@ -35,7 +33,7 @@ function submit() {
 
         // "Yes" button logic
         document.getElementById('yes').onclick = function () {
-            available.innerText = currentSeats;
+            available.innerText = currentSeats;// Update UI with new available seats
             Seatno.innerText = 0;
             total.innerText = "";
             confirmed.style.visibility = 'visible';
@@ -47,7 +45,6 @@ function submit() {
             setTimeout(() => {
                 location.reload();
             }, 1500)
-             // Update UI with new available seats
              
         };
 
