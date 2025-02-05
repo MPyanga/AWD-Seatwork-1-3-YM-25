@@ -69,7 +69,7 @@ The primary goal of this project is to simulate a real-world movie seat booking 
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
-- MultiPage Website/Single Page Website
+- MultiPage Website
 - Movie Selection Page
 - Dynamic Seat Reservation
 - Price Calculation 
